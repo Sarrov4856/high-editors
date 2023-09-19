@@ -1,0 +1,350 @@
+:root {
+    --padding-container: 100px 0;
+    --color-title: #001A49;
+    --color:rgb(75, 151, 151);
+    }
+
+body {
+   font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    max-width: 100%;
+    overflow-x: hidden;
+    transition: .5s ease all;
+}
+
+
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+#hero {
+    height: 100vh;
+    min-height: 600px;
+    max-height: 1000px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #000000;
+}
+
+.background-video {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%),;
+    background-size: cover;
+    z-index: -1;
+}
+
+
+/* Nav */
+
+.nav {
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+   
+}
+
+
+
+
+
+
+
+.switch {
+    background-color: rgb(0, 0, 0);
+    border-radius: 1000px;
+    border: solid 1px rgb(255, 255, 255);
+    color: #ffffff;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 28px;
+    position: absolute;
+    background-color: #ffffff;
+    top: 0;
+    left: unset;
+    right: 0;
+    border-radius: 100px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+
+.switch.active{
+    background-color: #ffffff;
+    color: #000000;
+   &::after{
+    right: unset;
+    left: 0;
+   }
+}
+
+ 
+ .switch.active span{
+    color: #000000;
+ }
+
+.switch span{
+    font-size: 14px;
+    display: block;
+    color: #ffffff;
+    margin: 4px;
+    transition: 0.4s ease color;
+}
+
+
+.nav .nav__title {
+    font-weight:600 ;
+    margin-left:60px;
+    margin-bottom: 30px;
+   
+}
+.nav__title img{
+   height: 60px;
+   width: 60px;
+    
+    }
+
+.high{
+    color:var(--color);
+}
+.nav img{
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__link {
+    padding: 0;
+    display: flex;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 4em;
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.nav__links:hover{
+    color:var(--color) ;
+}
+
+
+.nav__items {
+    list-style: none;
+}
+
+.nav__links {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.responive-menu-container {
+    cursor: pointer;
+    display:none;
+}
+
+
+.nav__img {
+    display: block;
+    width: 90px;
+}
+
+
+.nav__close {
+    display: var(--show, none);
+}
+
+
+/* Hero container */
+
+.hero__container {
+    max-width: 800px;
+    --padding-container: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 5rem;
+}
+
+
+
+.buscando{
+    color:var(--color) ;
+}
+
+
+#main{
+    background-color: #c6cdce;
+display: flex;
+width: 100%;
+
+}
+
+.conteiner{
+    width: 900px;
+
+margin-left: 200px;
+}
+
+.main-text{
+      font-size: 22px;
+    color: #000000;
+    font-weight: 0;
+}
+
+.main-text h2{
+    text-decoration: underline cornflowerblue;
+}
+
+
+.carrusel{
+    margin: auto;
+    
+}
+.carrusel img{
+    width: 180px;
+    height: 180px;
+    margin: 20px;
+}
+
+
+.zoom-image {
+    width: 200px; /* Tamaño original de la imagen */
+    height: 200px;
+    margin: 20px;
+    transition: transform 2s ease-in-out, box-shadow 2s ease-in-out; /* Agregamos la transición para la sombra */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Define la sombra inicial */
+    animation: glow 2s alternate infinite; /* Aplicamos la animación "glow" */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+}
+
+#footer{
+    background-color: #7272728c;
+    width: 100%;
+}
+
+.footer__copy{
+    --padding-container: 40px 0;
+    text-align: center;
+    color: #969696;
+}
+
+.footer__copyright{
+    font-weight: 700;
+}
+
+.footer__icons{
+    margin-bottom: 500px;
+    margin: 30px;
+    font-size: 40px;
+}
+
+.footer__img{
+    font-size:px;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .conteiner {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #main {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna para que las imágenes estén debajo del texto */
+    align-items: center; /* Centra horizontalmente el contenido */
+    background-color: #000000;
+  }
+
+  .carrusel {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 150px;/* Centra horizontalmente las imágenes */
+  }
+
+  .carrusel img {
+    width: 100%;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+  }
+
+
+#hero {
+  display: flex; /* Utiliza flexbox para centrar vertical y horizontalmente */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Establece la altura al 100% de la ventana */
+  min-height: 600px;
+  max-height: 1000px;
+  position: relative;
+  color: #fff;
+  width: 100%;
+}
+.nav{
+    display: none;
+}
+
+
+
+.responsive-menu-container {
+        display: block; /* Muestra el contenedor del botón */
+        position: absolute; /* Posición absoluta para el botón */
+        top: 10px; /* Alinea el botón en la parte superior */
+        right: 10px; /* Alinea el botón en la parte derecha */
+        z-index: 1; /* Asegura que el botón esté por encima del contenido */
+    }
+
+    #footer{
+        width: 100%;
+    }
+
+}

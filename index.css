@@ -81,6 +81,7 @@ body {
     cursor: pointer;
     display: flex;
     outline: none;
+    margin-right: 50px;
 }
 
 .switch::after{
@@ -286,6 +287,12 @@ margin-left: 200px;
 }
 
 
+.switch-res{
+    display: none;
+}
+
+
+
 @media screen and (max-width: 1200px) {
   .conteiner {
     width: 100%;
@@ -331,22 +338,73 @@ margin-left: 200px;
   color: #fff;
   width: 100%;
 }
+
+    #footer{
+        width: 100%;
+    }
+
+
 .nav{
     display: none;
 }
 
 
 
-.responsive-menu-container {
-        display: block; /* Muestra el contenedor del botón */
-        position: absolute; /* Posición absoluta para el botón */
-        top: 10px; /* Alinea el botón en la parte superior */
-        right: 10px; /* Alinea el botón en la parte derecha */
-        z-index: 1; /* Asegura que el botón esté por encima del contenido */
-    }
 
-    #footer{
-        width: 100%;
-    }
+
+
+
+.switch-res {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1000px;
+    border: solid 1px rgb(255, 255, 255);
+    color: #ffffff;
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    
+}
+
+.switch-res::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 29px;
+    position: absolute;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+
+.switch-res.active{
+    background-color: #ffffff;
+    color: #000000;
+   &::after{
+right: 0;
+    left: unset;
+   }
+}
+
+ 
+ .switch-res.active span{
+    color: #000000;
+ }
+
+.switch-res span{
+    font-size: 14px;
+    display: block;
+    color: #ffffff;
+    margin: 4px;
+    transition: 0.4s ease color;
+}
+
 
 }
